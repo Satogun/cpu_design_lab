@@ -1,4 +1,6 @@
-//for fpga 
+
+
+
 module fpga(
     input clk_i,
     input rst,
@@ -11,6 +13,8 @@ module fpga(
     output wire led_cf_o,
     output wire led_cg_o,
     output wire led_dp_o,
+    
+    
     input [23:0] device_sw,
     output[23:0] device_led
     );
@@ -27,7 +31,7 @@ module fpga(
     );
     
     LED_CTRL display(
-       .clk(clk_i),
+       .clk(clk),
        .rst_n(rst_n),
        .led_en(led_en),
        .led_ca_o(led_ca_o),
